@@ -33,7 +33,10 @@ qc = QuantumCircuit(1)
 qc.h(0) # La porte de Hadamard (H) met le qubit en superposition
 qc.measure_all() # On regarde le résultat !
 ```
-
+**📷 Circuit:**
+<div align="center">
+<img width="338" height="174" alt="Image" src="https://github.com/user-attachments/assets/f81e1b59-f18c-4e9c-93b2-445568b2a59d" />
+</div>
 > [!TIP]
 > **🎯 Résultat attendu :** Si on lance le circuit 1000 fois, on aura environ 50% de résultats `0` et 50% de `1`.
 
