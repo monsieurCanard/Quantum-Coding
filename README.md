@@ -82,6 +82,15 @@ qc.measure_all()
 <div align="center">
   <img width="466" height="238" alt="Image" src="https://github.com/user-attachments/assets/b5812035-6d63-49f4-8c1b-7ada537268d2" />
 </div>
+
+**📊 Resultats:**
+<div align="center">
+  <img width="630" height="470" alt="Image" src="https://github.com/user-attachments/assets/fcc0b2b2-47c4-4c49-bc25-80bef4347039" />
+</div>
+
+> [!NOTE]
+> Sur ce plot histrogramme, j'ai utilisé le nombre de fois où la combinaison a été mesurée plutôt que les probabilités comme dans l'exercice précédent car pour moi, cela revient au même pour expliquer le concept.
+
 > [!TIP]
 > **🎯 Résultat attendu :** Uniquement des paires identiques (puisque la cible copie ou suit le contrôle) : environ 50% de `00` et 50% de `11`. Jamais de `01` ou de `10`.
 
