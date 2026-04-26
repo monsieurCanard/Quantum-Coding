@@ -1,6 +1,6 @@
 <div align="center">
-<h1>🌌 Ftl-Quantum </h1>
-  <h2>Introduction et Cours Pratique sur l'Informatique Quantique</h2>
+<h1> ⚛️ Ftl-Quantum </h1>
+  <h2>Introduction à l'Informatique Quantique</h2>
   <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Qiskit-6929C4?style=for-the-badge&logo=qiskit&logoColor=white" alt="Qiskit">
@@ -18,9 +18,7 @@ Ce projet est une initiation pratique et, j'espère, accessible. Personellement,
 > [!NOTE]
 > J'ai utilisé Qiskit 1.x alors que la version 2.x est sortie récemment. Pourquoi ? Parce que la documentation et les ressources en ligne sont encore largement basées sur la 1.x, et je voulais que ce projet soit le plus accessible possible pour moi sachant que je pars de zéro.
 
-## 📁 Au programme
-
-### 1. La Superposition (1-superposition)
+## 1. La Superposition
 
 > [!NOTE]
 > **En mots simples :** Un bit normal (comme ceux de votre ordinateur classique) vaut soit `0`, soit `1`. Un qubit en superposition, lui, c'est comme une pièce de monnaie qui tourne en l'air : il est un mélange de `0` et de `1` en même temps, jusqu'à ce qu'on "l'arrête" pour le regarder (la mesure).
@@ -47,6 +45,7 @@ qc.measure_all() # On regarde le résultat !
 <div align="center">
   <img width="438" height="454" alt="Image" src="https://github.com/user-attachments/assets/9ed03f1b-b090-4d5c-bb70-3fd3549ee2a5" />
 </div>
+
 > [!NOTE]
 > **🤔 Question : Comment on "visualise" un qubit ?**  
 > Comme un qubit est un mélange continu (des probabilités) de `0` et de `1`, on le représente en 3D sur ce qu'on appelle la **Sphère de Bloch**. Imaginez un globe terrestre : le **Pôle Nord** représente `0`, et le **Pôle Sud** représente `1`. Quand on met le qubit en superposition (grâce à la porte `H`), sa flèche quitte le pôle pour pointer pile sur **l'équateur** ! *(Vous le verrez en action dans le notebook 1).*
@@ -57,7 +56,7 @@ qc.measure_all() # On regarde le résultat !
 
 ---
 
-### 2. L'Intrication Quantique (2-entanglement)
+## 2. L'Intrication Quantique
 
 > [!IMPORTANT]
 > **En mots simples :** C'est ce qu'Einstein appelait une "action fantôme à distance". Prenez deux qubits et intriquez-les. Si vous lisez la valeur du premier et tombez sur `0`, le second vaudra INSTANTANÉMENT `0` aussi, même s'il se trouve sur la planète Mars. Ils sont magiquement connectés !
@@ -91,12 +90,9 @@ qc.measure_all()
 > [!NOTE]
 > Sur ce plot histrogramme, j'ai utilisé le nombre de fois où la combinaison a été mesurée plutôt que les probabilités comme dans l'exercice précédent car pour moi, cela revient au même pour expliquer le concept.
 
-> [!TIP]
-> **🎯 Résultat attendu :** Uniquement des paires identiques (puisque la cible copie ou suit le contrôle) : environ 50% de `00` et 50% de `11`. Jamais de `01` ou de `10`.
-
 ---
 
-### 3. Le Bruit Quantique (Le monde physique) (3-quantum_noise)
+## 3. Le Bruit Quantique
 
 > [!WARNING]
 > **En mots simples :** Sur simulateur, tout est beau et parfait. Mais dans la vraie vie, les puces quantiques actuelles (qu'on appelle NISQ) sont fragiles. Elles subissent des interférences parasites de leur environnement (le "bruit quantique"), un peu comme des parasites sur une vieille radio.
@@ -104,13 +100,18 @@ qc.measure_all()
 **Pourquoi s'en soucier ?** 
 Dans ce notebook, on envoie *vraiment* notre code s'exécuter sur les ordinateurs quantiques physiques d'IBM. On réalise qu'un circuit censé renvoyer uniquement `00` et `11` va, à cause du bruit, cracher accidentellement quelques `01` ou `10`. Un formidable défi de l'ingénierie moderne !
 
+**📊 Resultats:**
+<div align="center">
+  <img width="630" height="470" alt="Image" src="https://github.com/user-attachments/assets/d6b16dac-7409-4089-a77a-da9c23fa24fc" />
+</div>
+
 > [!NOTE]
 > **🤔 Question : Pourquoi s'embêter avec ces machines d'IBM "bruyantes" si le simulateur (PC classique) est si parfait ?**  
 > Parce qu'on ne peut pas le simuler éternellement ! Pour simuler l'état d'un système quantique, la mémoire nécessaire grandit de façon **exponentielle** ($2^N$). Pour 10 qubits, c'est 1024 valeurs. Pour 50 qubits, cela sature complètement la RAM des plus gigantesques supercalculateurs mondiaux. Et pour seulement 300 qubits, il faudrait stocker plus de valeurs... qu'il n'y a d'atomes dans l'univers observable ! C'est ce "mur de la complexité classique" qui nous oblige à construire et utiliser de vraies puces quantiques, même si elles ont encore du bruit.
 
 ---
 
-### 4. L'Algorithme de Deutsch-Jozsa (4-deutsch-jozsa)
+## 4. L'Algorithme de Deutsch-Jozsa
 
 > [!NOTE]
 > **En mots simples :** Imaginez un distributeur de canard mystère : donne-t-il toujours le même canard (goût "Constant"), ou bien un mix équitable de deux goûts ("Balancé") ?
@@ -129,7 +130,7 @@ qc.measure([0,1,2], [0,1,2])
 
 ---
 
-### 5. L'art de chercher vite : Algorithme de Grover (search_algo)
+## 5. L'art de chercher vite : Algorithme de Grover (search_algo)
 
 > [!NOTE]
 > **En mots simples :** C'est comment chercher une aiguille dans une botte de foin. Si vous cherchez une combinaison secrète parmi un million de possibilités, un PC normal testera en moyenne 500 000 fois. L'algorithme de Grover amplifie la "bonne réponse" à chaque essai, réduisant le nombre de tests nécessaires à seulement 1 000 !
@@ -144,16 +145,18 @@ oracle.h(2)
 # Pour savoir combien de fois répéter, on utilise la formule : nombre d'itérations ≈ π/4 * √N (N = nombre de possibilités).
 ```
 
-> [!TIP]
-> **🎯 Résultat attendu :** Un pic quasi-parfait ! Si l'élément secret est `111`, l'histogramme de résultats renverra cet état avec une probabilité bien plus élevée que les autres.
+**🎯 Résultat attendu :** Un pic quasi-parfait ! Si l'élément secret est `111`, l'histogramme de résultats renverra cet état avec une probabilité bien plus élevée que les autres.
 
 ## 🚀 Installation & Exécution
 
 Pour utiliser ces jupyter notebooks, vous devez d'abord comprendre python et son environment virtuel. Je vous recommande d'utiliser `venv` ou `conda` pour créer un environnement isolé. Ensuite, installez les dépendances nécessaires avec la commande suivante :
 
 ```bash
-pip install qiskit qiskit[visualization] qiskit-aer qiskit-ibm-runtime
+pip install qiskit qiskit-aer qiskit-ibm-runtime
 ```
 
+>[!TIP]
+> Si vous voulez des affichages de circuit comme les miens pensez à installer **matplotlib**
+
 > [!IMPORTANT]
-> Pour utiliser le vrai hardware IBM Quantum sur le notebook `3-quantum_noise`, pensez à définir votre jeton `IBM_QUANTUM_KEY` dans vos variables d'environnement.
+> Pour utiliser le vrai hardware IBM Quantum sur le notebook `3-quantum_noise`, pensez à définir le token de votre compte IBM et definir la variable `IBM_QUANTUM_KEY` dans vos variables d'environnement.
