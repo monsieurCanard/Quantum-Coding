@@ -33,7 +33,7 @@ qc = QuantumCircuit(1)
 qc.h(0) # La porte de Hadamard (H) met le qubit en superposition
 qc.measure_all() # On regarde le résultat !
 ```
-**📷 Circuit:**
+**🏁 Circuit:**
 <div align="center">
 <img width="338" height="174" alt="Image" src="https://github.com/user-attachments/assets/f81e1b59-f18c-4e9c-93b2-445568b2a59d" />
 </div>
@@ -78,7 +78,10 @@ qc.h(0)     # On met le premier qubit en superposition (il est un mix de 0 et 1)
 qc.cx(0, 1) # La porte CNOT lie le qubit 1 au comportement du qubit 0
 qc.measure_all()
 ```
-
+**🏁 Circuit:**
+<div align="center">
+  <img width="466" height="238" alt="Image" src="https://github.com/user-attachments/assets/b5812035-6d63-49f4-8c1b-7ada537268d2" />
+</div>
 > [!TIP]
 > **🎯 Résultat attendu :** Uniquement des paires identiques (puisque la cible copie ou suit le contrôle) : environ 50% de `00` et 50% de `11`. Jamais de `01` ou de `10`.
 
