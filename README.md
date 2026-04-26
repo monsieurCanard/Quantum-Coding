@@ -37,9 +37,16 @@ qc.measure_all() # On regarde le résultat !
 <div align="center">
 <img width="338" height="174" alt="Image" src="https://github.com/user-attachments/assets/f81e1b59-f18c-4e9c-93b2-445568b2a59d" />
 </div>
-> [!TIP]
-> **🎯 Résultat attendu :** Si on lance le circuit 1000 fois, on aura environ 50% de résultats `0` et 50% de `1`.
 
+**📊 Resultats:**
+<div align="center">
+  <img width="630" height="470" alt="Image" src="https://github.com/user-attachments/assets/e49f2295-4cc8-452a-b7c2-c40b181e5dfd" />
+</div>
+
+**🔮Representation Sphere de Bloch:**
+<div align="center">
+  <img width="438" height="454" alt="Image" src="https://github.com/user-attachments/assets/9ed03f1b-b090-4d5c-bb70-3fd3549ee2a5" />
+</div>
 > [!NOTE]
 > **🤔 Question : Comment on "visualise" un qubit ?**  
 > Comme un qubit est un mélange continu (des probabilités) de `0` et de `1`, on le représente en 3D sur ce qu'on appelle la **Sphère de Bloch**. Imaginez un globe terrestre : le **Pôle Nord** représente `0`, et le **Pôle Sud** représente `1`. Quand on met le qubit en superposition (grâce à la porte `H`), sa flèche quitte le pôle pour pointer pile sur **l'équateur** ! *(Vous le verrez en action dans le notebook 1).*
