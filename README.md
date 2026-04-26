@@ -1,4 +1,5 @@
 <div align="center">
+  <img width="1460" height="349" alt="Image" src="https://github.com/user-attachments/assets/4c2a6d65-0aa1-40e9-b31c-fb15be0f6209" />
 <h1> ⚛️ Ftl-Quantum </h1>
   <h2>Introduction à l'Informatique Quantique</h2>
   <p align="center">
